@@ -1,8 +1,8 @@
-package strategy.behavior;
+package strategy;
 
-import strategy.behavior.duck.Duck;
-import strategy.behavior.duck.MallardDuck;
-import strategy.behavior.duck.ModelDuck;
+import strategy.duck.Duck;
+import strategy.duck.MallardDuck;
+import strategy.duck.ModelDuck;
 import strategy.behavior.fly.FlyRocketPowered;
 
 /**
@@ -16,7 +16,7 @@ public class MiniDuckSimulator {
 
         Duck model = new ModelDuck();
         model.performFly();
-        model.setFlyBehavior(new FlyRocketPowered());
+        model.setFlyBehavior(new FlyRocketPowered());//策略
         model.performFly();
     }
 }
